@@ -1,0 +1,13 @@
+parameters:
+    level: max
+    paths:
+        - src
+
+    reportUnmatchedIgnoredErrors: true
+
+    ignoreErrors:
+        - '#Cannot access offset .+ on mixed#'
+        - '#Parameter \$.+ of class Cline\\Retry\\Strategy\\.+ constructor expects .+, mixed given#'
+        - '#Anonymous function should return .+ but returns .+\|null#'
+        - '#Invalid type Throwable\|null to throw#'
+        - '#has Throwable in PHPDoc @throws tag but it''s not thrown#'
