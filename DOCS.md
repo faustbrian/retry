@@ -1,11 +1,11 @@
 ## Table of Contents
 
-1. [Overview](#doc-docs-readme) (`docs/README.md`)
-2. [Backoff Strategies](#doc-docs-backoff-strategies) (`docs/backoff-strategies.md`)
-3. [Configuration](#doc-docs-configuration) (`docs/configuration.md`)
-4. [Examples](#doc-docs-examples) (`docs/examples.md`)
-5. [Functional Api](#doc-docs-functional-api) (`docs/functional-api.md`)
-6. [Oop Api](#doc-docs-oop-api) (`docs/oop-api.md`)
+1. [Overview](#doc-docs-readme)
+2. [Backoff Strategies](#doc-docs-backoff-strategies)
+3. [Configuration](#doc-docs-configuration)
+4. [Examples](#doc-docs-examples)
+5. [Functional Api](#doc-docs-functional-api)
+6. [Oop Api](#doc-docs-oop-api)
 <a id="doc-docs-readme"></a>
 
 Retry is a comprehensive retry library for PHP 8.4+ featuring multiple backoff strategies, jitter support, and both functional and fluent OOP interfaces for building resilient applications.
