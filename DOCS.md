@@ -1,11 +1,13 @@
 ## Table of Contents
 
-1. Overview (`docs/README.md`)
-2. Backoff Strategies (`docs/backoff-strategies.md`)
-3. Configuration (`docs/configuration.md`)
-4. Examples (`docs/examples.md`)
-5. Functional Api (`docs/functional-api.md`)
-6. Oop Api (`docs/oop-api.md`)
+1. [Overview](#doc-docs-readme) (`docs/README.md`)
+2. [Backoff Strategies](#doc-docs-backoff-strategies) (`docs/backoff-strategies.md`)
+3. [Configuration](#doc-docs-configuration) (`docs/configuration.md`)
+4. [Examples](#doc-docs-examples) (`docs/examples.md`)
+5. [Functional Api](#doc-docs-functional-api) (`docs/functional-api.md`)
+6. [Oop Api](#doc-docs-oop-api) (`docs/oop-api.md`)
+<a id="doc-docs-readme"></a>
+
 Retry is a comprehensive retry library for PHP 8.4+ featuring multiple backoff strategies, jitter support, and both functional and fluent OOP interfaces for building resilient applications.
 
 ## Installation
@@ -62,10 +64,12 @@ Retry logic is essential for handling transient failures:
 
 ## Next Steps
 
-- [Functional API](./functional-api.md) - Using the `retry()` function
-- [OOP API](./oop-api.md) - Fluent interface with conditional retries
-- [Backoff Strategies](./backoff-strategies.md) - All 8 backoff algorithms
-- [Examples](./examples.md) - Real-world usage patterns
+- [Functional API](#doc-docs-functional-api) - Using the `retry()` function
+- [OOP API](#doc-docs-oop-api) - Fluent interface with conditional retries
+- [Backoff Strategies](#doc-docs-backoff-strategies) - All 8 backoff algorithms
+- [Examples](#doc-docs-examples) - Real-world usage patterns
+
+<a id="doc-docs-backoff-strategies"></a>
 
 Retry provides 8 different backoff strategies to handle various retry scenarios. Each strategy calculates delays differently to suit specific use cases.
 
@@ -257,6 +261,8 @@ Polynomial: 100    400    900   1600   2500   3600  (degree 2)
 
 *All values in milliseconds with 100ms base*
 
+<a id="doc-docs-configuration"></a>
+
 Retry includes a Laravel service provider that publishes a configuration file for setting default retry behavior.
 
 ## Publishing the Config
@@ -426,6 +432,8 @@ return [
     // ...
 ];
 ```
+
+<a id="doc-docs-examples"></a>
 
 Real-world examples demonstrating retry patterns in various scenarios.
 
@@ -823,6 +831,8 @@ function processDataFeed(string $url): array
 | Queues | Exponential | 5m | Selective by type |
 | Microservices | ExponentialJitter | 10s | Circuit breaker |
 
+<a id="doc-docs-functional-api"></a>
+
 The `retry()` function provides a functional, composable interface for retry logic. It returns a closure that can be reused across multiple operations.
 
 ## Basic Usage
@@ -980,7 +990,9 @@ The functional API is simpler but has fewer features:
 - No max delay caps built-in (implement in custom callable or use OOP API)
 - Less discoverable than fluent interface
 
-For conditional retries or max delay caps, use the [OOP API](./oop-api.md).
+For conditional retries or max delay caps, use the [OOP API](#doc-docs-oop-api).
+
+<a id="doc-docs-oop-api"></a>
 
 The `Retry` class provides a fluent, object-oriented interface with advanced features like conditional retries and max delay caps.
 
