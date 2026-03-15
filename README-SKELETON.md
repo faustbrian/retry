@@ -65,14 +65,14 @@ To create a new package from this skeleton:
 
 ### Development Tools
 
-- **Makefile** - Convenient make commands for common tasks:
-  - `make build` - Build Docker containers
-  - `make shell` - Open shell in PHP container
-  - `make composer` - Install dependencies
-  - `make lint` - Run PHP-CS-Fixer
-  - `make refactor` - Run Rector
-  - `make test` - Run full test suite
-  - `make test:lint`, `test:types`, `test:unit`, etc. - Individual test commands
+- **justfile** - Convenient just commands for common tasks:
+  - `just build` - Build Docker containers
+  - `just shell` - Open shell in PHP container
+  - `just composer` - Install dependencies
+  - `just lint` - Run PHP-CS-Fixer
+  - `just refactor` - Run Rector
+  - `just test` - Run full test suite
+  - `just test-lint`, `test-types`, `test-unit`, etc. - Individual test commands
 
 - **docker-compose.yml** - Docker setup with PHP 8.4
 - **docker/php/84/** - PHP 8.4 Docker configuration with Xdebug
@@ -109,9 +109,9 @@ The following composer scripts are available:
 - `composer lint` - Fix code style issues
 - `composer refactor` - Run refactoring with Rector
 - `composer test` - Run all tests (lint, type-coverage, unit, types, refactor)
-- `composer test:lint` - Check code style
-- `composer test:types` - Run PHPStan type checks
-- `composer test:unit` - Run unit tests with 100% coverage requirement
+- `composer test-lint` - Check code style
+- `composer test-types` - Run PHPStan type checks
+- `composer test-unit` - Run unit tests with 100% coverage requirement
 - `composer test:type-coverage` - Run type coverage checks (100% required)
 - `composer test:refactor` - Check refactoring suggestions
 
